@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pizzas Martinez</title>
+  </head>
+  <body>
+    <!-- Header and Title -->
+    <header>
+      <h1>Pizzas Martinez</h1>
+    </header>
+    <main>
+      <h3>Delicious mexican pizzas that will make you feel at home</h3>
+
+      <!-- Menu Section -->
+      <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+          <li>
+            <h4>Margherita Pizza</h4>
+            <p>Classic delight with 100% real mozzarella cheese.</p>
+            <p>Price: $10.99</p>
+          </li>
+          <li>
+            <h4>Pepperoni Pizza</h4>
+            <p>A crowd favorite with pepperoni and extra cheese.</p>
+            <p>Price: $12.99</p>
+          </li>
+          <li>
+            <h4>Mexican Fiesta Pizza</h4>
+            <p>
+              Spicy chicken, jalapeños, onions, and a special Mexican sauce.
+            </p>
+            <p>Price: $14.99</p>
+          </li>
+          <li>
+            <h4>Veggie Supreme Pizza</h4>
+            <p>A delight for veggie lovers with a mix of fresh vegetables.</p>
+            <p>Price: $11.99</p>
+          </li>
+          <li>
+            <h4>BBQ Chicken Pizza</h4>
+            <p>Grilled chicken, BBQ sauce, and onions.</p>
+            <p>Price: $13.99</p>
+          </li>
+        </ul>
+      </section>
+
+      <form action="/submit-order" method="post">
+        <!-- Form to ask personal information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <input type="email" id="email" name="email" required />
+          <input type="tel" id="phone" name="phone" required />
+        </fieldset>
+        <!-- Form to ask for pizza details -->
+        <fieldset>
+          <legend>Pizza Details</legend>
+          <label for="number">Number of Pizzas:</label>
+          <input type="number" id="number" name="number" min="1" required />
+          <label for="size">Size:</label>
+          <select id="size" name="size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <legend>Crust</legend>
+          <br />
+          <label for="crust">Crust:</label>
+          <select id="crust" name="crust" required>
+            <option value="thin">Thin</option>
+            <option value="thick">Thick</option>
+            <option value="stuffed">Stuffed</option>
+          </select>
+          <legend>Toppings:</legend>
+          <br />
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="pepperoni" name="pepperoni" />
+          <label for="sausage">Sausage</label>
+          <input type="checkbox" id="sausage" name="sausage" />
+          <label for="mushrooms">Mushrooms</label>
+          <input type="checkbox" id="mushrooms" name="mushrooms" />
+          <label for="topping-bacon">Bacon</label>
+          <input type="checkbox" id="bacon" name="toppings" value="bacon" />
+          <label for="extra-cheese">Extra Cheese</label>
+          <input
+            type="checkbox"
+            id="extra-cheese"
+            name="toppings"
+            value="extra-cheese"
+          />
+        </fieldset>
+        <!-- Form to ask for order type -->
+        <fieldset>
+          <legend>Order Type</legend>
+          <label for="takeout">Take Out</label>
+          <input
+            type="radio"
+            id="takeout"
+            name="order-type"
+            value="takeout"
+            checked
+          />
+          <label for="delivery">Delivery</label>
+          <input
+            type="radio"
+            id="delivery"
+            name="order-type"
+            value="delivery"
+          />
+          <label for="eat-in">Eat In</label>
+          <input type="radio" id="eat-in" name="order-type" value="eat-in" />
+        </fieldset>
+        <button type="submit" value="Place-order">Submit Order</button>
+        <button type="reset" value="Reset-Form">Reset form</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2024 Pizzas Martinez</p>
+    </footer>
+  </body>
+</html>
